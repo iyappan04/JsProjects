@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    
+
+    <style>
+        .fade {
+            animation-name: fade !important;
+            animation-duration: 1.5s !important;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .7;
+                transform: translate(100px, 0);
+                transition-delay: 350ms;
+            }
+            to {
+                opacity: 1;
+                transform: translate(0);
+                transition-delay: 350ms;
+            }
+        }
+
+        .active{
+            background-color: rgb(54, 52, 52);
+        }
+
+    </style>
+
+    <div class="slider-container">
+
+        <div class="bg-gray-400">
+            <div class="container mx-auto max-w-screen-2xl py-20 text-white">
+
+                <div class="relative flex items-center justify-center">
+    
+                    <div class="absolute left-0 lg:left-20 h-full flex items-center justify-center  text-4xl" onclick="nextSlide(-1)">
+                        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                    </div>
+    
+
+
+                    <div class="flex flex-col items-center justify-center gap-12 slides">
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            <div class="flex flex-col items-center justify-center gap-12 bg-black bg-opacity-80 fade py-10">
+                                <div>
+                                    <img src="./profile.jpeg" class="w-40 h-40 object-cover rounded-full border border-4" alt="">
+                                </div>
+                                <div class="space-y-4">
+                                    <h1 class="font-bold text-4xl text-center">Profile 1</h1>
+                                    <p class="text-center max-w-2xl">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, blanditiis quae aspernatur quos, vel beatae nostrum molestias, placeat quas dicta nam iure. Magni optio temporibus ratione? Excepturi neque laboriosam optio!</p>
+                                </div>
+                            </div>
+                           
+                            <div class="flex flex-col items-center justify-center gap-12 bg-black bg-opacity-80 fade py-10">
+                                <div>
+                                    <img src="./profile.jpeg" class="w-40 h-40 object-cover rounded-full border border-4" alt="">
+                                </div>
+                                <div class="space-y-4">
+                                    <h1 class="font-bold text-4xl text-center">Profile 2</h1>
+                                    <p class="text-center max-w-2xl">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, blanditiis quae aspernatur quos, vel beatae nostrum molestias, placeat quas dicta nam iure. Magni optio temporibus ratione? Excepturi neque laboriosam optio!</p>
+                                </div>
+                            </div>
+                          
+                            <div class="flex flex-col items-center justify-center gap-12 bg-black bg-opacity-80 fade py-10">
+                                <div>
+                                    <img src="./profile.jpeg" class="w-40 h-40 object-cover rounded-full border border-4" alt="">
+                                </div>
+                                <div class="space-y-4">
+                                    <h1 class="font-bold text-4xl text-center">Profile 3</h1>
+                                    <p class="text-center max-w-2xl">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, blanditiis quae aspernatur quos, vel beatae nostrum molestias, placeat quas dicta nam iure. Magni optio temporibus ratione? Excepturi neque laboriosam optio!</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col items-center justify-center gap-12 slides">
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            <div class="flex flex-col items-center justify-center gap-12 bg-black bg-opacity-80 fade py-10">
+                                <div>
+                                    <img src="./profile.jpeg" class="w-40 h-40 object-cover rounded-full border border-4" alt="">
+                                </div>
+                                <div class="space-y-4">
+                                    <h1 class="font-bold text-4xl text-center">Profile 4</h1>
+                                    <p class="text-center max-w-2xl">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, blanditiis quae aspernatur quos, vel beatae nostrum molestias, placeat quas dicta nam iure. Magni optio temporibus ratione? Excepturi neque laboriosam optio!</p>
+                                </div>
+                            </div>
+                           
+                            <div class="flex flex-col items-center justify-center gap-12 bg-black bg-opacity-80 fade py-10">
+                                <div>
+                                    <img src="./profile.jpeg" class="w-40 h-40 object-cover rounded-full border border-4" alt="">
+                                </div>
+                                <div class="space-y-4">
+                                    <h1 class="font-bold text-4xl text-center">Profile 5</h1>
+                                    <p class="text-center max-w-2xl">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, blanditiis quae aspernatur quos, vel beatae nostrum molestias, placeat quas dicta nam iure. Magni optio temporibus ratione? Excepturi neque laboriosam optio!</p>
+                                </div>
+                            </div>
+                          
+                            <div class="flex flex-col items-center justify-center gap-12 bg-black bg-opacity-80 fade py-10">
+                                <div>
+                                    <img src="./profile.jpeg" class="w-40 h-40 object-cover rounded-full border border-4" alt="">
+                                </div>
+                                <div class="space-y-4">
+                                    <h1 class="font-bold text-4xl text-center">Profile 6</h1>
+                                    <p class="text-center max-w-2xl">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, blanditiis quae aspernatur quos, vel beatae nostrum molestias, placeat quas dicta nam iure. Magni optio temporibus ratione? Excepturi neque laboriosam optio!</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col items-center justify-center gap-12 slides">
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            <div class="flex flex-col items-center justify-center gap-12 bg-black bg-opacity-80 fade py-10">
+                                <div>
+                                    <img src="./profile.jpeg" class="w-40 h-40 object-cover rounded-full border border-4" alt="">
+                                </div>
+                                <div class="space-y-4">
+                                    <h1 class="font-bold text-4xl text-center">Profile 7</h1>
+                                    <p class="text-center max-w-2xl">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, blanditiis quae aspernatur quos, vel beatae nostrum molestias, placeat quas dicta nam iure. Magni optio temporibus ratione? Excepturi neque laboriosam optio!</p>
+                                </div>
+                            </div>
+                           
+                            <div class="flex flex-col items-center justify-center gap-12 bg-black bg-opacity-80 fade py-10">
+                                <div>
+                                    <img src="./profile.jpeg" class="w-40 h-40 object-cover rounded-full border border-4" alt="">
+                                </div>
+                                <div class="space-y-4">
+                                    <h1 class="font-bold text-4xl text-center">Profile 8</h1>
+                                    <p class="text-center max-w-2xl">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, blanditiis quae aspernatur quos, vel beatae nostrum molestias, placeat quas dicta nam iure. Magni optio temporibus ratione? Excepturi neque laboriosam optio!</p>
+                                </div>
+                            </div>
+                          
+                            <div class="flex flex-col items-center justify-center gap-12 bg-black bg-opacity-80 fade py-10">
+                                <div>
+                                    <img src="./profile.jpeg" class="w-40 h-40 object-cover rounded-full border border-4" alt="">
+                                </div>
+                                <div class="space-y-4">
+                                    <h1 class="font-bold text-4xl text-center">Profile 9</h1>
+                                    <p class="text-center max-w-2xl">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, blanditiis quae aspernatur quos, vel beatae nostrum molestias, placeat quas dicta nam iure. Magni optio temporibus ratione? Excepturi neque laboriosam optio!</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                   
+
+
+        
+                    <div class="absolute right-0 lg:right-20 h-full flex items-center justify-center text-4xl" onclick="nextSlide(1)">
+                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    </div>
+
+                    <div class="absolute -bottom-16 flex flex-row gap-4 text-4xl">
+                        <div class="point w-4 h-4 bg-white rounded-full text-white cursor-pointer" onclick="currentSlide(1)"></div>
+                        <div class="point w-4 h-4 bg-white rounded-full text-white cursor-pointer" onclick="currentSlide(2)"></div>
+                        <div class="point w-4 h-4 bg-white rounded-full text-white cursor-pointer" onclick="currentSlide(3)"></div>
+                    </div>
+
+
+                </div>
+    
+            </div>
+        </div>
+       
+    </div>
+
+    <script>
+
+        let slideindex = 1;
+
+        showSlide(slideindex);
+
+        function nextSlide(index){
+            showSlide(slideindex += index);
+        }
+
+        function currentSlide(index){
+            showSlide(slideindex=index);
+        }
+
+        function showSlide(n){
+
+            let slides = document.getElementsByClassName("slides");
+            let points = document.getElementsByClassName("point");
+
+            if(n > slides.length){
+                slideindex = 1;
+            }
+            if(n<1){
+                slideindex = slides.length;
+            }
+            for(let i=0;i<slides.length;i++){
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < points.length; i++) {
+                points[i].className = points[i].className.replace(" active", "");
+            }
+
+            slides[slideindex-1].style.display = "flex";
+            points[slideindex-1].className += " active";
+        }
+
+
+    </script>
+
+    
+</body>
+</html>
