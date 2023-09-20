@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mega menu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+
+  <style>
+
+
+      .right{
+        animation-name: right !important;
+        animation-duration: 1.5s !important;
+      }
+      .trans{
+          animation-name: tans !important;
+          animation-duration: 1.5s !important;
+      }
+
+
+      .tab-contents{
+            display: none !important;
+        }
+
+        .actives{
+            display: flex !important;
+        }
+
+
+      .active{
+        border: 2px solid rgb(69, 69, 204) !important;
+      }
+
+
+
+      @keyframes tans {
+          from {
+              transform: translateY(-100px);
+              transition-delay: 150ms;
+          }
+          to {
+              transform: translate(0);
+              transition-delay: 150ms;
+          }         
+      }
+
+      @keyframes right {
+          from {
+              transform: translateX(-100px);
+              transition-delay: 150ms;
+          }
+          to {
+              transform: translate(0);
+              transition-delay: 150ms;
+          }  
+      }
+  </style>
+
+
+
+
+  <div class="bg-gray-200 z-10 w-full relative top-0 sticky">
+
+  
+        <div class="w-full bg-white absolute">
+
+            <div class="container mx-auto max-w-screen-2xl">
+                <div class="flex flex-col lg:flex-row justify-between gap-4 px-6 py-6 z-20">
+      
+                    <div class="flex flex-row justify-between">
+                      <h1 class="font-bold text-black">Hello</h1>
+                      <h1 class="lg:hidden font-bold show" onclick="navToggle()"><i class="fa fa-bars" aria-hidden="true"></i></h1>
+                      <h1 class="font-bold hidden close" onclick="navToggle()">x</h1>
+                    </div>
+            
+                    <hr class="lg:hidden">
+            
+                    <div class="right hidden flex lg:flex flex-col lg:flex-row gap-4 lg:gap-12 sm:right lg:!right" id="navMenu">
+                      <div>
+                        <p>Home</p>
+                      </div>
+                      <div>
+                        <p>About</p>
+                      </div>
+                      <div>
+                        <p>Contact</p>
+                      </div>
+                      <div class="flex gap-3 items-center justify-between cursor-pointer" onclick="openMenu()">
+                        <p>Products</p>
+                        <i class="fa fa-chevron-down down" aria-hidden="true"></i>
+                        <i class="fa fa-chevron-up hidden up" aria-hidden="true"></i>
+                      </div>
+                    </div>
+            
+                </div>
+            </div>
+          
+        </div>
+      
+        <div class="absolute w-full hidden shadow-xl trans bg-white fixed w-full top-[233px] lg:top-[56px]" id="menu">
+              <div class="container mx-auto max-w-screen-2xl px-6">
+          
+                <div class="hidden lg:flex flex-col lg:flex-row gap-12 px-6 py-6">
+            
+            
+                    <div class="hidden lg:flex flex-col gap-4">
+                    <div class="click px-4 py-2" onclick="openTab(event, 'slide1')">
+                        <p>Education</p>
+                    </div>
+                    <div class="click px-4 py-2" onclick="openTab(event, 'slide2')">
+                        <p>Health</p>
+                    </div>
+                    <div class="click px-4 py-2" onclick="openTab(event, 'slide3')">
+                        <p>Development</p>
+                    </div>
+                    </div>
+            
+                    <div class="flex flex-col lg:flex-row justify-between gap-2">
+            
+            
+                    <div class="lg:hidden click px-4 py-2">
+                        <p>Education</p>
+                    </div>
+            
+                    <div class="flex flex-col gap-4 content hidden" id="slide1">
+            
+                        <div>
+                        <p>Uniflo</p>
+                        <p class="max-w-sm">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                        </div>
+                        <div>
+                        <p>Zealbots</p>
+                        <p class="max-w-sm">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                        </div>
+                        <div>
+                        <p>Aspect</p>
+                        <p class="max-w-sm">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                        </div>
+                    </div>
+                
+                    <div class="lg:hidden click px-4 py-2">
+                        <p>Health</p>
+                    </div>
+            
+            
+                    <div class="flex flex-col gap-4 content hidden" id="slide2">
+                        <div>
+                        <p>Uniflo 1</p>
+                        <p class="max-w-sm">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                        </div>
+                        <div>
+                        <p>Zealbots 1</p>
+                        <p class="max-w-sm">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                        </div>
+                        <div>
+                        <p>Aspect 1</p>
+                        <p class="max-w-sm">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                        </div>
+                    </div>
+                
+            
+                    <div class="lg:hidden click px-4 py-2">
+                        <p>Development</p>
+                    </div>
+                
+                    <div class="flex flex-col gap-4 content hidden" id="slide3">
+                        <div>
+                        <p>Uniflo 2</p>
+                        <p class="max-w-sm">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                        </div>
+                        <div>
+                        <p>Zealbots </p>
+                        <p class="max-w-sm">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                        </div>
+                        <div>
+                        <p>Aspect</p>
+                        <p class="max-w-sm">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                        </div>
+                    </div>
+                
+                    </div>
+                    
+                </div>
+    
+                <div class="flex flex-col lg:hidden">
+            
+                    <div>
+            
+            
+                        <div class="space-y-3 p-2 flex flex-row justify-between tab-link w-full">
+                            <p>Education</p>
+                            <i class="fa fa-chevron-down tabicon" aria-hidden="true"></i>
+                        </div>
+            
+                        <div class="tab-contents flex flex-col">
+                            <div>
+                            <p>Uniflo</p>
+                            <p class="max-w-sm">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                            </div>
+                            <div>
+                            <p>Zealbots</p>
+                            <p class="max-w-sm">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                            </div>
+                            <div>
+                            <p>Aspect</p>
+                            <p class="max-w-sm">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                            </div>
+                        </div>
+            
+                    </div>
+                    
+                    <div>
+            
+                        
+                        <div class="space-y-3 p-2 flex flex-row items-center justify-between tab-link">
+                            <p>Assets</p>
+                            <i class="fa fa-chevron-down tabicon" aria-hidden="true"></i>
+                        </div>
+            
+            
+                        <div class="tab-contents flex flex-col">
+                            <div>
+                            <p>Uniflo</p>
+                            <p class="max-w-sm">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                            </div>
+                            <div>
+                            <p>Zealbots</p>
+                            <p class="max-w-sm">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                            </div>
+                            <div>
+                            <p>Aspect</p>
+                            <p class="max-w-sm">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                            </div>
+                        </div>
+            
+            
+                    </div>
+            
+                    <div>
+                        <div class="space-y-3 p-2 flex flex-row items-center justify-between tab-link">
+                            <p>Public</p>
+                            <i class="fa fa-chevron-down tabicon" aria-hidden="true"></i>
+                        </div>
+            
+            
+            
+                        <div class="tab-contents flex flex-col">
+                            <div>
+                            <p>Uniflo</p>
+                            <p class="max-w-sm">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                            </div>
+                            <div>
+                            <p>Zealbots</p>
+                            <p class="max-w-sm">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                            </div>
+                            <div>
+                            <p>Aspect</p>
+                            <p class="max-w-sm">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                            </div>
+                        </div>
+                    </div>
+            
+                </div>
+
+              </div>
+              </div>
+        </div>
+
+
+
+
+
+  </div>
+  
+
+ 
+
+
+  <div class="bg-gray-800 h-[80vh] flex items-center justify-center text-white">
+      <div class="container mx-auto max-w-screen-2xl">
+        <div class="flex flex-col-reverse lg:flex-row gap-12 items-center justify-between">
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam consectetur sunt necessitatibus cupiditate libero pariatur unde quibusdam, corporis deserunt! Ex repudiandae, quia eveniet aspernatur assumenda nostrum omnis perferendis! Autem, earum.</p>
+            </div>
+            <div>
+                <img src="https://images.unsplash.com/photo-1569317002804-ab77bcf1bce4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dW5zcGxhc2h8ZW58MHx8MHx8fDA%3D&w=1000&q=80" alt="">
+            </div>
+        </div>
+      </div>
+  </div>
+
+
+  
+
+
+
+
+
+
+  
+  <script>
+
+
+      function openMenu(){
+        let menu = document.getElementById("menu");
+        let down = document.querySelector(".down");
+        let up = document.querySelector(".up");
+        menu.classList.toggle("hidden");
+        down.classList.toggle("hidden");
+        up.classList.toggle("hidden");
+      }
+
+      function navToggle(){
+        let navMenu = document.getElementById("navMenu");
+        navMenu.classList.toggle("hidden");
+
+        let show = document.querySelector(".show");
+        let close = document.querySelector(".close");
+
+        show.classList.toggle("hidden");
+        close.classList.toggle("hidden");
+
+        let menu = document.getElementById("menu");
+
+        if(close.classList.contains("close")){
+            menu.classList.add("hidden");
+        }
+   
+      }
+
+
+        function openTab(evt, slideName) {
+
+            const tabContents = document.getElementsByClassName('content');
+
+            for (let i = 0; i < tabContents.length; i++) {
+              tabContents[i].classList.add('hidden');
+            }
+
+            const tabButtons = document.getElementsByClassName('click');
+            for (let i = 0; i < tabButtons.length; i++) {
+              tabButtons[i].classList.remove('active');
+            }
+
+
+            document.getElementById(slideName).classList.toggle('hidden');
+            evt.currentTarget.classList.add('active');
+        }
+
+        document.getElementById('slide1').classList.remove('hidden');
+        document.getElementsByClassName('click')[0].classList.add('active');
+  </script>
+
+
+<script>
+
+
+  const tablinks = document.querySelectorAll(".tab-link");
+
+  const tabcontents = document.querySelectorAll(".tab-contents");
+  
+
+  tablinks.forEach((tablink, index)=>{
+
+      tablink.addEventListener("click", function(e){
+        
+
+          if(!tablink.classList.contains('actives')){
+
+              tablinks.forEach(link=>{   
+                  link.classList.remove("actives");
+              })
+
+              tabcontents.forEach(content=>{ 
+                  content.classList.remove("actives");
+              })
+
+              tablink.classList.add("actives");  
+              tabcontents[index].classList.add("actives"); 
+             
+                const tabicon = document.querySelectorAll(".tabicon");
+                tabicon[index].classList.remove("fa-chevron-down");
+                tabicon[index].classList.add("fa-chevron-up");
+
+
+          }
+
+          else{
+
+              tablink.classList.remove('actives'); 
+              tabcontents[index].classList.remove('actives');
+
+              const tabicon = document.querySelectorAll(".tabicon");
+              tabicon[index].classList.add("fa-chevron-down");
+              tabicon[index].classList.remove("fa-chevron-up");
+
+          }
+
+
+
+      })
+  })
+
+
+
+
+</script>
+  
+</body>
+</html>

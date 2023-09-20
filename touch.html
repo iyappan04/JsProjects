@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    
+
+    <div class="bg-gray-600 w-full h-[50vh] lg:h-[80vh] sample">
+
+    </div>
+    
+    <script>
+
+        let sample = document.querySelector(".sample");
+
+        sample.addEventListener("touchstart", function(e){
+
+      
+
+            [...e.changedTouches].forEach((touch)=>{
+                // console.log(touch.pageX);
+                // console.log(touch.identifier);
+                // console.log(e.srcElement.clientWidth);
+
+                let x_value = touch.pageX; 
+
+                let deviceWidth = e.srcElement.clientWidth;
+                let divide = deviceWidth/2;
+
+                if(x_value<divide){
+                    console.log("low");
+                }
+                else{
+                    console.log("high");
+                }
+            })
+        })
+
+
+        // sample.addEventListener("touchmove", function(event){
+
+        //     var touch = event.touches[0];
+
+        //     var moveOffsetX = sample.offsetLeft - touch.pageX;
+        //     var positionX = touch.pageX + moveOffsetX;
+
+        //     console.log(positionX);
+
+        // })
+
+
+        // sample/addEventListener("touchend", function(){
+        //     console.log("Hello touchend");
+        // })
+
+    </script>
+
+
+</body>
+</html>
