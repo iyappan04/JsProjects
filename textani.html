@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    
+
+    <style>
+        span{
+            opacity: 0 !important;
+            transition: all 1s ease !important;
+            transform: translateY(50px) !important;
+        }
+        span.fade{
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+    </style>
+
+
+    <div class="mx-auto max-w-screen-2xl">
+        <div class="h-[100vh] bg-gray-200 flex items-center justify-center text-center">
+            <h1 class="title text-4xl">Chadura Tech</h1>
+        </div>
+    </div>
+  
+
+
+    <script>
+        const text = document.querySelector(".title");
+
+        const strText = text.textContent;
+
+        const splitText = strText.split("");
+
+        text.textContent = "";
+
+        for(let i=0;i<splitText.length;i++){
+            text.innerHTML += "<span>"+splitText[i]+"</span>";
+        }
+
+        let char = 0;
+
+        let timer = setInterval(myTick, 200);
+
+        function myTick(){
+            const span = document.querySelectorAll("span")[char];
+
+            span.classList.add("fade");
+
+            char++;
+
+            if(char === splitText.length){
+                complete();
+                return;
+            }
+
+            function complete(){
+                clearInterval(timer);
+                timer = null;
+            }
+        }
+
+
+
+    </script>
+
+</body>
+</html>
