@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+
+    
+
+    <div class="container mx-auto max-w-screen-2xl px-6 py-4">
+        <div class="flex flex-col lg:flex-row items-center justify-between">
+            <div>
+                <h1>Hello</h1>
+            </div>
+
+            <div class="flex flex-col lg:flex-row items-center gap-12 relative">
+                <div>
+                    <h1>Home</h1>
+                </div>
+                <div class="flex items-center gap-2 justify-between">
+                    <div class="flex items-center gap-6" data-id="dropdownone" onclick="dropdown(this)">
+                        <h1>About</h1>
+                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    </div>
+                  
+
+                    <div class="dropdown absolute flex flex-col gap-6 items-center shadow-lg py-6 top-[100px] lg:top-[50px] px-12 hidden w-[50%] bg-white z-10" id="dropdownone">
+                        <div>
+                            <h1>Hello</h1>
+                        </div>
+                        <div>
+                            <h1>Hello</h1>
+                        </div>
+                        <div>
+                            <h1>Hello</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center gap-2 justify-between">
+                    <div class="flex items-center gap-6" data-id="dropdowntwo" onclick="dropdown(this)">
+                        <h1>About</h1>
+                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    </div>
+                  
+
+                    <div class="dropdown absolute flex flex-col gap-6 items-center shadow-lg py-6 top-[100px] lg:top-[50px] px-12 hidden w-[50%] bg-white z-10" id="dropdowntwo">
+                        <div>
+                            <h1>Hello</h1>
+                        </div>
+                        <div>
+                            <h1>Hello</h1>
+                        </div>
+                        <div>
+                            <h1>Hello</h1>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div>
+                    <h1>Contact</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container h-[80vh] mx-auto max-w-screen-2xl">
+        <div class="flex flex-col items-center justify-center">
+            <div>
+                <h1>Hello</h1>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro repellat, a velit tempore aliquam accusantium enim voluptates at quaerat dolor labore eaque nulla repellendus blanditiis, quo ipsa veritatis, dolore tenetur?</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // function toggle(){
+        //     let dropdown = document.getElementById("dropdown");
+
+        //     dropdown.classList.toggle("hidden");
+        // }
+
+        function dropdown(e){
+
+            let idvalue = e.getAttribute("data-id");
+
+            let object = document.getElementById(idvalue);
+         
+            if(!object.classList.contains("hidden")){
+
+                let dropdowns = document.querySelectorAll(".dropdown");
+
+                for(let i=0;i<dropdowns.length;i++){
+                    dropdowns[i].classList.add("hidden");
+                }
+
+                object.classList.add("hidden");
+            }
+            else{
+                
+                let dropdowns = document.querySelectorAll(".dropdown");
+
+                for(let i=0;i<dropdowns.length;i++){
+                    dropdowns[i].classList.add("hidden");
+                }
+
+                object.classList.remove("hidden");
+            }
+
+          
+
+        }
+    </script>
+
+</body>
+</html>
