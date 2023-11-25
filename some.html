@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DropDown</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+
+    <div class="bg-gray-200">
+        <div
+            class="flex flex-col lg:flex-row lg:items-center justify-between py-5 px-6 gap-12 lg:gap-0 container mx-auto max-w-[1200px]">
+            <div>
+                <h1 class="text-4xl font-bold ">Navbar Dropdown</h1>
+            </div>
+            <div class="flex flex-col lg:flex-row lg:items-center gap-6 lg:gap-10">
+                <div>
+                    <a href="">Home</a>
+                </div>
+
+                <div class="relative">
+
+                    <div class="flex lg:hidden flex-row items-center gap-1" onclick="toggleDropdown(event, 'dropdown1')">
+                        <p>About</p>
+                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    </div>
+                    <div class="hidden lg:flex flex-row items-center gap-1" onclick="toggleDropdownlg(event, 'dropdownlg1')">
+                        <p>About</p>
+                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    </div>
+
+                    <div class="absolute top-14 px-6 dropdownlg bg-gray-200 py-4 hidden lg:flex flex-col gap-3 w-full lg:w-[230px] lg:hidden"
+                    id="dropdownlg1">
+                        <div>
+                            <p>Hello 0</p>
+                        </div>
+                        <div>
+                            <p>Hello One</p>
+                        </div>
+                        <div>
+                            <p>Hello Two</p>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="dropdown bg-gray-200 py-4 flex lg:hidden flex-col gap-3 w-full lg:w-[230px] hidden"
+                    id="dropdown1">
+                    <div>
+                        <p>Hello 0</p>
+                    </div>
+                    <div>
+                        <p>Hello One</p>
+                    </div>
+                    <div>
+                        <p>Hello Two</p>
+                    </div>
+                </div>
+
+
+                <div class="relative">
+                    <div class="flex lg:hidden flex-row items-center gap-1" onclick="toggleDropdown(event, 'dropdown2')">
+                        <p>Projects</p>
+                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    </div>
+                    <div class="hidden lg:flex flex-row items-center gap-1" onclick="toggleDropdownlg(event, 'dropdownlg2')">
+                        <p>Projects</p>
+                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    </div>
+                    <div class="absolute top-14 px-6 dropdownlg bg-gray-200 py-4 hidden lg:flex flex-col gap-3 w-full lg:w-[230px] lg:hidden"
+                    id="dropdownlg2">
+                        <div>
+                            <p>Hello 1</p>
+                        </div>
+                        <div>
+                            <p>Hello One</p>
+                        </div>
+                        <div>
+                            <p>Hello Two</p>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="dropdown bg-gray-200 py-4 flex lg:hidden flex-col gap-3 w-full lg:w-[230px] hidden"
+                    id="dropdown2">
+                    <div>
+                        <p>Hello 1</p>
+                    </div>
+                    <div>
+                        <p>Hello One</p>
+                    </div>
+                    <div>
+                        <p>Hello Two</p>
+                    </div>
+                </div>
+
+                <div>
+                    <a href="">Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleDropdown(event, id) {
+
+            if (!document.getElementById(id).classList.contains("hidden")) {
+
+
+                let dropdowns = document.querySelectorAll(".dropdown");
+
+                for (let i = 0; i < dropdowns.length; i++) {
+                    dropdowns[i].classList.add("hidden");
+                }
+
+                document.getElementById(id).classList.add("hidden");
+            }
+            else {
+
+                let dropdowns = document.querySelectorAll(".dropdown");
+
+                for (let i = 0; i < dropdowns.length; i++) {
+                    dropdowns[i].classList.add("hidden");
+                }
+
+                document.getElementById(id).classList.remove("hidden");
+            }
+
+        }
+
+
+        function toggleDropdownlg(event, id) {
+
+            if (!document.getElementById(id).classList.contains("lg:hidden")) {
+
+
+                let dropdownslg = document.querySelectorAll(".dropdownlg");
+
+                for (let i = 0; i < dropdownslg.length; i++) {
+                    dropdownslg[i].classList.add("lg:hidden");
+                }
+
+                document.getElementById(id).classList.add("lg:hidden");
+            }
+            else {
+
+                let dropdownslg = document.querySelectorAll(".dropdownlg");
+
+                for (let i = 0; i < dropdownslg.length; i++) {
+                    dropdownslg[i].classList.add("lg:hidden");
+                }
+
+                document.getElementById(id).classList.remove("lg:hidden");
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>
